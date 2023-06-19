@@ -16,8 +16,8 @@ jobs:
 
   second-shell-cmd:
     runs-on: ubuntu-latest
-    needs: 
-      - last-cmd
+    # needs: 
+    #   - last-cmd
     steps:
       - name: step pytyhon something
         run: python -V
