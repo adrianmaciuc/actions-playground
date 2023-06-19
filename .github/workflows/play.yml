@@ -13,3 +13,16 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+  second-shell-cmd:
+    runs-on: ubuntu-latest
+    needs: ["last-cmd"]
+    steps:
+      - name: step pytyhon something
+        run: python -V
+  last-cmd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: last action
+        run: |
+          import platform
+          print(platform.node())
