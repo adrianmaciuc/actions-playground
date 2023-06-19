@@ -1,0 +1,14 @@
+name: First attempt at actions
+
+on: [push]
+
+jobs:
+  run-shell-cmd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step echo something
+        run: echo "bash installed by default"
+      - name: a multiline this time
+        run: |
+          node -v
+          npm -v
